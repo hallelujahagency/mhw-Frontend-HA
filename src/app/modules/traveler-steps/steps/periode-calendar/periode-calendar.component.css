@@ -1,0 +1,16 @@
+.Travelers {
+    text-align: center;
+    padding-top: 120px;
+  }
+  
+  @media (max-width: 600px) {
+    .Travelers {
+      padding-top: 5px;
+      padding-bottom: 20px;
+    } 
+  }
+  
+  .Travelers h2 {
+    color: #35989b;
+    /* text-shadow: 0.2px 0.2px 0.4px #2f888b; */
+  }

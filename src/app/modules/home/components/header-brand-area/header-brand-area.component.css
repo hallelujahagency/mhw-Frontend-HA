@@ -1,0 +1,52 @@
+.DivStartCustom {
+    background-image: url("../../../../../assets/img/home.png");
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+  }
+  
+  .DivStartCustom a {
+    margin-top: min(calc(490px + (40vw / 6)), 600px);
+    background-color: #ffb485;
+    border-radius: min(1vw, 12px);
+    padding-left: min(12vw, 90px);
+    position: relative;
+  }
+  
+  .DivStartCustom span {
+    display: inline-block;
+    overflow: hidden;
+    padding-left: min(1.6vw, 18px);
+    font-family: "Wildy Sans";
+    font-size: min(4vw, 36px);
+    font-weight: 500;
+  }
+  
+  .DivStartCustom a:after {
+    content: " ";
+    position: absolute;
+    left: min(3vw, 24px);
+    top: min(2.2vw, 18px);
+    background-image: url("../../../../../assets/waves/wave-white.png");
+    background-size: cover;
+    width: min(6vw, 48px);
+    height: min(4vw, 32px);
+  }
+
+  .NavButtoncustom {
+    display: inline-block;
+    color: white !important;
+     font-family: "Raleway Variable"; 
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-weight: 600;
+    font-size: smaller;
+    text-decoration: none;
+    box-shadow: 1px 1px 3px gray;
+    border: 1px solid transparent;
+  }
+  
+  .NavButtoncustom:hover {
+      box-shadow: 2px 2px 3px gray;
+      border: 1px solid gray;
+  }

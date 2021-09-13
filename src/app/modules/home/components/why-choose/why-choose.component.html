@@ -1,0 +1,55 @@
+<div id="why" class="choose-us-area bg-image padding-top-90" style="background-image: url(assets/img/choose/bg.png);">
+    <div class="bg-img" style="background-image: url(assets/img/illustration-ensemble-4.png);"></div>
+    <div class="bg-img-02" style="background-image: url(assets/img/leaf/leaf-01.png);"></div>
+    <div class="bg-img-03" style="background-image: url(assets/img/leaf/leaf-02.png);"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+               
+            </div>
+            <div class="col-lg-6 offset-lg-1">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6 col-sm-6" *ngFor="let choose of choosen">
+                        <div class="choose-single-item margin-bottom-30">
+                            <div class="icon {{choose.class}}">
+                                <i class="{{choose.icon}}"></i>
+                            </div>
+                            <div class="content">
+                                <h4 class="title">
+                                    <a href="">{{choose.title}}</a>
+                                </h4>
+                                <p>{{choose.description}} </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="call-to-action-area padding-top-80 bg-image" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="call-to-action-inner" style="background-color: #35989b;">
+                        <div class="line-area">
+                            <span class="line-one"></span>
+                            <span class="line-two"></span>
+                            <span class="line-three"></span>
+                        </div>
+                        <span class="bubble"></span>
+                        <div class="action-bg-img" style="background-image: url(assets/img/call-to-action/animation/dot.png);"></div>
+                        <div class="action-bg-img-02" style="background-image: url(assets/img/call-to-action/animation/cricle.png);"></div>
+                        <h2 class="title">Inscrivez vous et retrouver la joie d'être ensemble</h2>
+                        <p class="subtitle">Une relation virtuelle ne pourra jamais une réelle</p>
+                        <div class="btn-wrapper desktop-center" >
+                            <a routerLink="../nous-contacter" class="boxed-btn"  style="background-color: #ffa45e;">{{'pageAccueil.newsletterButtom' | translate}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

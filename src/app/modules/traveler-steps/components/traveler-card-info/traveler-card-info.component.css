@@ -1,0 +1,162 @@
+
+  
+  .container {
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+   /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    line-height: 1.5;*/
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
+  }
+
+  .container-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: #35989b;
+    width: 45px;
+    height: 45px;
+   
+    display: grid;
+    place-items: center;
+    font-size: 1.7rem;
+    color: #FFFF;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+  }
+
+  .container-text {
+    padding: 10px 40px 10px 10px;
+  }
+
+  .container-text input[type=text] ~ label::before {
+    content: "";
+  }
+  .container-text h2 {
+    font-size: 1.2rem;
+    color: #1A2250;
+  }
+  .container-text p {
+    font-size: 14px;
+    color: #3B4169;
+    margin: 10px 0;
+  }
+  .container-text input,
+  .container-text button {
+    width: 100%;
+    border: none;
+    padding: 14px;
+  }
+  .container-text input {
+    outline: none;
+  }
+  .container-text button {
+    background-image: linear-gradient(to right, #89CAFF, #6589FF);
+    display: block;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 20px #89caff94;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  .container-text button:hover {
+    box-shadow: none;
+  }
+  .container-text span {
+    display: block;
+    text-align: center;
+    margin: 20px 0 0;
+    color: #BABDCB;
+    font-size: 12px;
+  }
+
+
+  .Input {
+    display: flex;
+    flex-direction: row-reverse;
+    border-bottom: 1px solid rgba(255, 252, 232, 0.1);
+    padding-bottom: 3px;
+    margin-bottom: 5px;
+  }
+  .Input input {
+    outline: none;
+    border: 0;
+    color: black;
+  }
+ 
+ /* .Input input:focus ~ label {
+    opacity: 1;
+  }
+  .Input input[type=text] ~ label::before {
+    content: "";
+  }*/
+
+  /*.Input .namePerson ~ label::before {
+    content: "";
+  }
+
+  .Input .station ~ label::before {
+    content: "f041";
+  }
+  
+  .Input label {
+    font-family: FontAwesome;
+    font-size: 13px;
+    opacity: 0.1;
+    transition: opacity 0.5s ease;
+  }
+ /* .Input label::before {
+    align-items: center;
+    color: black;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+  
+  }
+*/
+  .Input .icon-custom {
+    align-items: center;
+    color: black;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+  
+  }
+
+ 
+
+  .ta-results.list-group{
+    max-width: 400px;
+    overflow: auto;
+    background-color: #35989b;
+    max-height: 75vh;
+    top: 10%;
+    border: 1px solid #ccc;
+}
+.typeahead-wrap .list-group-item {    
+    width:100%;
+    text-align: left;
+    position: relative;
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.typeahead-wrap .list-group-item{
+    width:100%;
+    text-align: left;
+}
+.typeahead-wrap .list-group-item.active{
+    background-color: #ccc;
+}
+
+.typeahead-wrap .list-group-item .item-name {
+    font-weight: bold;
+}

@@ -1,0 +1,21 @@
+
+                      <li class="cursor-pointer" (click)="onClickSidebarTrans()" [ngClass]=" directItemActive === direct.uuid ? 'active' : ''" *ngIf="direct">
+                        <div class="chat-box">
+                          
+                          <div class="profile " [ngClass]=" UserIfconnect() ? 'online' : 'offline'"
+                                    style="background-image: url('{{UserDataPhoto()}}'); background-size: cover; background-position: center center; display: block;"
+                                    >
+                                
+                        </div>
+                          <div class="details">
+                            <h5 [innerText]="UserDataName()"></h5> 
+                            <h6 [innerText]="Messagelast(direct.messages)" *ngIf="!typing"></h6>
+                            <h6  *ngIf="typing">écrit...</h6>
+                          </div>
+                          <div class="date-status"><i class="ti-pin2"></i>
+                            <h6 *ngIf="MessagelastDate(direct.messages) !== null && !typing"> {{   ( MessagelastDate(direct.messages) | amLocale:'fr' | amTimeAgo:true)}}</h6>
+                             <!-- <h6 class="font-success status" *ngIf="direct.seen"> Vu</h6> 
+                            <div class="badge badge-primary sm" [innerText]="direct.notReadNumber" *ngIf="direct.notReadNumber > 0"></div> -->
+                          </div>
+                        </div> 
+                      </li>

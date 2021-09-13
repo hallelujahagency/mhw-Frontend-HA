@@ -1,0 +1,199 @@
+ /* card css */
+
+ .card-video{
+  visibility:hidden;
+  /*background-color: #f19e8f;*/
+ }
+ .card-custom:hover .card-video{
+  visibility:visible;
+ }
+ .selected-custom{
+  margin-top:35px;
+  box-shadow: 1.8px 1.8px 60px#f19e8f;
+}
+
+ .card-custom:hover, .card-custom:focus-within {
+/*   box-shadow: 0 0 0 2px #ffa45e, 0 10px 60px 0 rgba(0, 0, 0, 0.1);
+  transform: translatey(-5px); */
+  margin-top:35px;
+  box-shadow: 1.8px 1.8px 60px#f19e8f;
+  transition:.125s;
+}
+
+.custom-car-foot{
+  border-bottom:4px solid #ffc05e;
+  border-radius:10px;
+}
+ .card-custom-destination {
+    margin-top: 10px;
+    width:100%;
+    height:auto;
+    background-color:#fffafa;
+    border-bottom:4px solid #ffc05e;
+    border-radius:10px;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.11);
+    overflow:hidden;
+    float:left;
+    transition:.25s;
+    cursor:pointer;
+  }
+  .card-custom-destination:hover {
+   margin-top:35px;
+   box-shadow: 1.8px 1.8px 10px#f19e8f;
+    transition:.125s;
+  }
+
+ .selected {
+    margin-top:35px;
+    box-shadow: 1.8px 1.8px 60px#f19e8f;
+   }
+
+
+
+  img {
+    
+   /* height:220px;
+   width: auto;*/
+   height:170px;
+   width: 360px;
+  }
+  .content {
+    margin-top:-50px;
+  }
+  .price-custom-destination {
+    text-align:center;
+    color:#495f71;
+   
+  }
+
+  .currency {
+    font-size:1.3rem;
+    font-weight: bold;
+    color: #ffc05e;
+    display: block;
+    margin-top: 15px;
+    font-family: "Raleway Variable";
+    line-height:12px;
+  }
+  .info-city {
+    float:left;
+    padding:9px 18px;
+  }
+  .trip-name {
+    color: #35989b;
+    font-family: "Wildy_Sans";
+    font-weight: 100;
+    font-size: 1.9rem;
+    display:block;
+    margin-top: 0px;
+  }
+  .for-people-nbre {
+    font-family: "Raleway";
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  .content-empreinte {
+    font-family: "Raleway";
+    font-size: 1.3rem;
+  }
+  
+  .trip-contains {
+    display:block;
+    font-size:16px;
+    padding:6px 0;
+  }
+  .trip-contains img {
+    padding-right:3px;
+    color:#7DCD75;
+  }
+  .clip-polygon {
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 167px, 53px 167px, 60px 60%, 67px 167px, 0% 167px);
+  }
+
+.videocard{
+  position:absolute;
+  margin-left:3px;
+  margin-top: 10px;
+}
+
+   .card-custom-destination:hover .video-card{
+   display:block;
+   }
+
+
+  .Clickable {
+    cursor: pointer;
+    height: 20px;
+    width: 40px;
+    margin: 0 auto;
+    background-color: #35989b;
+    mask: url("../../../../../assets/arrows/chevron-down-solid.svg") no-repeat;
+    mask-position: center bottom;
+    mask-size: 18px;
+    transform: scaleX(1.5);
+    z-index: 200;
+  }
+
+  
+  .TravelResults_Selection__hoAZU {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.TravelResults_SelectionItem__15KDO {
+  color: black;
+  font-weight: 700;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.TravelResults_CloseSelectionItem__2_B9M {
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: -5px;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+
+.TravelResults_CloseSelectionItem__2_B9M:before {
+  left: 45%;
+  width: 8%;
+  top: 23%;
+  height: 53%;
+}
+
+.TravelResults_CloseSelectionItem__2_B9M:after {
+  top: 45%;
+  height: 8%;
+  width: 53%;
+  left: 23%;
+}
+
+  
+
+@media (min-width: 1200px){
+  .modal-xl-custom {
+      max-width: 1140px;
+  }
+}
+@media (min-width: 992px){
+    .modal-xl-custom {
+        max-width: 800px;
+    }
+  }
+
+  /* Important part */
+.modal-dialog{
+  overflow-y: initial !important
+}
+.modal-body{
+  height: 80vh;
+  overflow-y: auto;
+}

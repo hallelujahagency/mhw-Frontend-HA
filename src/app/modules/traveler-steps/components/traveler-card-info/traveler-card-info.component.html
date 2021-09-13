@@ -1,0 +1,27 @@
+
+        <div class="container" *ngIf="card">
+            <div class="container-close" (click)="onDelete()">
+                <span style="margin:auto !important">&times;</span>
+            </div>
+            <div class="container-text ">
+                <div class="Input namePerson">
+                    <input type="text" placeholder="Saisir un nom" [(ngModel)]="card.nameVoyager" (change)="changeName()"/>	
+                    <img alt="user" class="icon-custom" src="assets/icons/person.svg">
+                </div>
+
+                <div class="Input station">
+                     <input type="text" placeholder="La ville" [value]="stationSelectedName"
+                                ngxTypeahead [taList]="stations"  [taItemTpl]="itemTpl"
+                                (taSelected)="selectGare($event)"/>	
+                    <img alt="city" class="icon-custom" src="assets/icons/location.svg">
+                </div>
+            
+            <span style="color:red;" *ngIf="card.error">Tous les champs sont requis</span>
+            </div>
+        </div>
+
+        <ng-template #itemTpl let-result class="list-item" style="position: absolute;">
+            <!--<div style="background-color: #35989b;">-->
+               <strong>{{ result.result.name }}</strong>
+            <!--</div>-->
+          </ng-template>

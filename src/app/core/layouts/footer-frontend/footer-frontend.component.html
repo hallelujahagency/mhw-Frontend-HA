@@ -1,0 +1,78 @@
+    <!-- footer area start -->
+    <footer class="footer-area">
+        <div class="footer-top style-04 padding-top-85 padding-bottom-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer-widget widget">
+                            <div class="about_us_widget">
+                                <a  class="footer-logo" [routerLink]="'/'"> 
+                                     <img src="assets/img/MHw-logo-desktop.png" alt="footer logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="widget widget_nav_menu">
+                            <p>Nous suivre</p>
+                            <ul class="social_share style-01">
+                                <li><a href="https://www.instagram.com/meet_halfway/" target="blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/Meet.Halfway.co/" target="blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://twitter.com/Meet_Halfway_co/" target="blank"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/meet-halfway-co/" target="blank"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                            
+                        </div>
+                        <!--<img src="assets/countries/flag/16x16/fr.png">-->
+                        <select name="lang"  (change)="onChangeLang($event)">
+                            <option value="fr">Français</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                       
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer-widget style-01 widget widget_nav_menu">
+                            <h4 class="widget-title">Products</h4>
+                            <ul>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Help Center</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer-widget style-01 widget widget_nav_menu">
+                            <h4 class="widget-title">Resources</h4>
+                            <ul>
+                                <li><a href="#">FAQ’S</a></li>
+                                <li><a href="#">Testimonial</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer-widget style-01 widget widget_nav_menu">
+                            <h4 class="widget-title">Relevent</h4>
+                            <ul>
+                                <li><a href="#">Why</a></li>
+                                <li><a href="#">Products</a></li>
+                                <li><a href="#">Customers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area style-03">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright-area-inner">
+                            © Copyrights {{ dateAnnee }} MeetHalfway All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->

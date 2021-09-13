@@ -1,0 +1,42 @@
+
+
+<div class="chitchat-container sidebar-toggle" style="visibility:hidden;">
+
+    <app-sidebar-left [itemsDirect]="itemsDirect" [itemsDirectCustom]="directsConversations"  
+                    [itemsGroup]="itemsGroup" (onClickDirect)="onClickDirect($event)" ></app-sidebar-left>
+
+
+    <div class="chitchat-main small-sidebar" id="content">
+
+        <div class="chat-content tabto active">
+                <div class="messages custom-scroll" [ngClass]=" activeTab === 'blank' ? 'active' : ''" id="blank">
+                    <app-messages-blank></app-messages-blank>
+
+                </div>
+
+                <div class="messages custom-scroll"  [ngClass]=" activeTab === 'direct' ? 'active' : ''" id="chating">
+
+                    <app-direct-content [Cardprofil]="userOtherDirect"  [conversationActive]="conversationActive"  ></app-direct-content>
+                </div>
+
+                <div class="messages custom-scroll"  [ngClass]=" activeTab === 'group' ? 'active' : ''" id="group_chat">
+                    <app-group-content></app-group-content>
+
+                </div>
+
+            
+
+                <div class="message-input">
+                        <app-message-input [conversationActive]="conversationActive"  
+                        (onSendMessage)="onSendMessage($event)"></app-message-input>
+                </div>
+        </div>
+
+
+    </div>
+
+
+    <app-sidebar-right [Cardprofil]="profilTab"></app-sidebar-right>
+
+
+</div>

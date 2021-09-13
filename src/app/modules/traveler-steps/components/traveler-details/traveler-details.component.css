@@ -1,0 +1,726 @@
+
+  .streamers {
+    display: flex;
+    text-align: center;
+  }
+  .streamers img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+  }
+
+
+  .bookButtom {
+    display: inline-block;
+    background-color: #ffa45e;
+    color: white;
+    font-family: "Wildy_Sans";
+    border-radius: 5px;
+    padding: 2px 5px;
+    font-size: smaller;
+    text-decoration: none;
+    box-shadow: 1px 1px 3px gray;
+    border: 1px solid transparent;
+    font-size: 1.3rem;
+  }
+
+
+  .Clickable-custom {
+    cursor: pointer;
+    height: 20px;
+    width: 16px;
+    background-color: gray;
+    mask: url("../../../../../assets/arrows/chevron-down-solid.svg") no-repeat 50% 50%/12px;
+    transform: rotate(-90deg);
+    margin-left: -12px;
+  }
+  
+  .Rotate {
+    transform: rotate(180deg);
+  }
+
+
+
+.ticketInfoTransport {
+  width: 80px;
+  border-right: 1px dashed #ebebee;
+  text-align: center;
+  box-shadow: 0 4px 20px 0 rgb(0 0 0 / 10%);
+  background-color: #fff;
+  border-radius: 10px;
+}
+.ticketInfoTransport img {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  width: 18px !important;
+  height: 18px  !important;
+}
+.ticketInfoTransport span {
+  font-size: 10px;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.ticketInfoTransport span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 51px;
+  min-height: 16px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #000;
+  margin-bottom: 8px;
+  white-space: pre-wrap;
+}
+
+.ticketInfoDetails {
+  flex-grow: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 4px 20px 0 rgb(0 0 0 / 10%);
+}
+.ticketInfoDetails h4, .ticketInfoDetails h4 span {
+  display: flex;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: #000;
+}
+
+.ticketInfoDetails h4 {
+  
+  margin: 5px 0 0 20px;
+ 
+  line-height: 10px;
+  min-height: 35px;
+  max-width: 235px;
+  white-space: pre-wrap;
+  background-image: url(https://app.eightydays.me/static/media/menu.06c3d5ad.svg);
+ background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 12px auto;
+}
+
+.ticketInfoDetails {
+  line-height: 10px;
+  min-height: 35px;
+  max-width: 245px;
+  white-space: pre-wrap;
+  background-image: url(https://app.eightydays.me/static/media/menu.06c3d5ad.svg);
+ background-position: right 8px;
+  background-repeat: no-repeat;
+  background-size: 12px auto;
+}
+
+
+.ticketDetailsInfos {
+  padding: 3px 10px 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.ticketInfoStation {
+  position: relative;
+  margin-right: 0;
+  flex: 3 1;
+}
+.ticketInfoStation address {
+  
+ /* display: flex;
+
+  align-items: center;
+  margin-top: -7px;
+  margin-bottom: 3px;*/
+  font-size: 10px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  min-height: 30px;
+  letter-spacing: normal;
+  color: #888;
+  white-space: pre-wrap;
+ /* min-width: 50px;
+  max-width: 73px;*/
+}
+.ticketInfoStation span, .ticketInfoStation small {
+  display: block;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: #000;
+}
+.ticketInfoStation span {
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: -7px;
+  max-width: 65px;
+  line-height: 1.25;
+}
+.ticketInfoStation small {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+
+.ticketInfoStation small {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+.ticketInfoStation span, .ticketInfoStation small {
+    display: block;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: #000;
+}
+.ticketInfoStation i {
+  position: absolute;
+  font-size: 10px;
+  left: 73px;
+  width: 58px;
+  bottom: 9px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #43d359;
+}
+
+.TourInfoMap-Duration {
+  font-size: 10px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  max-width: 41px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #888;
+  border-bottom: 1px solid #b6b6bc;
+  padding-bottom: 5px;
+  flex: 2 1;
+  margin-right: 15px;
+  position: relative;
+}
+
+
+
+/* modal change ticket */
+
+
+
+@media (min-width: 769px){
+  .fixed-section .onlyFixed {
+      max-height: 100%;
+      padding: 8px 24px;
+  }
+}
+
+
+  .fixed-section.onlyFixed {
+  height: auto;
+  overflow-y: auto;
+  position: relative;
+}
+
+@media (min-width: 769px){
+
+  .trip{
+      box-shadow: 0 0 12px rgb(186 199 213 / 50%);
+  }
+
+}
+
+.trip{
+  border: 2px solid transparent;
+  border-bottom-color: #e2e8f0;
+  border-radius: 6px;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 8px;
+  position: relative;
+  transition: all .2s;
+}
+.trip:hover{
+  border: 2px solid #35989b;
+  box-shadow: 1.8px 1.8px 10px#35989b;
+}
+
+
+@media (min-width: 769px){
+  .trip .info {
+      font-size: 1em;
+      padding: 16px;
+  }
+}
+
+.trip .info {
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+.trip .info .row-custom + .row-custom {
+  margin-top: 16px;
+}
+
+.trip .info .row-custom {
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row nowrap;
+}
+
+@media (min-width: 769px){
+
+  .trip .info .row-custom .airlines {
+      width: 50px;
+  }
+}
+
+.trip .info .row-custom .airlines {
+  align-self: flex-start;
+  position: relative;
+}
+
+.trip .info .row-custom .airlines img {
+  border-radius: 100%;
+  height: 30px;
+  position: absolute;
+}
+
+.trip .info .row-custom .city {
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  font-size: .85em;
+}
+
+.trip .info .row-custom .city .departure-time {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.trip .info .row-custom .scales-info {
+  text-align: center;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+}
+
+.trip .info .row-custom .scales-info .duration {
+  font-size: .8em;
+  font-weight: 800;
+}
+
+.trip .info .row-custom .scales-info .separator {
+  border-top: 1px solid #e4e4e4;
+  margin: 2px 15px;
+  display: flex;
+  justify-content: space-around;
+}
+.trip .info .row-custom .scales-info .scales {
+  font-size: .8em;
+  font-weight: 800;
+}
+
+.trip .info .row-custom .scales-info .separator .stop {
+  position: relative;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: #999;
+  top: -3px;
+  margin: 0 10px;
+}
+
+@media (min-width: 769px)  {
+  .trip .small-detail {
+      padding: 0 0 0 15px;
+  }
+}
+
+@media (min-width: 769px) {
+  .trip .price-wrapper {
+      font-size: 1em;
+      min-width: 20%;
+      padding: 12px;
+  }
+}
+
+.trip .price-wrapper {
+  -webkit-box-align: center;
+  align-items: center;
+  color: #4a5568;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  font-weight: 700;
+  width: auto;
+}
+
+.trip .price-wrapper .price {
+  font-size: 1.25em;
+}
+.color-accent {
+  color: #ff7a58!important;
+}
+
+
+
+
+
+.CityInfo-Wrapper {
+  /* padding: 20px 30px;
+  vertical-align: middle;
+  position: relative; */
+  height: 150px; }
+  @media (max-width: 640px) {
+    .CityInfo-Wrapper {
+      height: 200px;
+      padding: 20px;
+      width: 100%; } }
+
+.CityInfo-Wrapper-Narrow {
+  height: 100px; }
+
+.CityInfo-Wrapper-Wide {
+  height: 220px; }
+
+.CityInfo-Circle {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  border: solid 3px #ffffff;
+  color: #ffffff;
+  padding-top: 5px;
+  position: relative;
+  z-index: 2; }
+  .CityInfo-Circle p, .CityInfo-Circle small {
+    display: block;
+    text-transform: uppercase; }
+  .CityInfo-Circle p {
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.81;
+    letter-spacing: normal; }
+  .CityInfo-Circle small {
+    font-size: 10px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: normal; }
+
+.CityInfo-Path {
+  height: 190px;
+  width: 120px;
+  border-radius: 50%;
+  border-left: 2px solid;
+  border-top: 2px solid transparent !important;
+  border-bottom: 2px solid transparent !important;
+  position: absolute;
+  left: 24px;
+  z-index: 1; }
+  @media (max-width: 640px) {
+    .CityInfo-Path {
+      display: none; } }
+  .CityInfo-Wrapper-Wide .CityInfo-Path {
+    height: 250px; }
+
+.CityInfo-Circle-Marker {
+  color: rgba(255, 255, 255, 0);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../../../../../assets/images/ic-route-normal.8abd9613.svg); }
+
+.CityInfo-CityTitle {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px; }
+  @media (max-width: 640px) {
+    .CityInfo-CityTitle {
+      margin-top: 0px;
+      margin-left: 20px; } }
+
+.CityInfo-CityName {
+  display: block;
+  margin: 0;
+  width: 206px;
+  font-size: 30px;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.03;
+  letter-spacing: normal;
+  color: #000000; }
+  @media (max-width: 640px) {
+    .CityInfo-CityName {
+      width: 200px; } }
+
+.CityInfo-CitySubtitle {
+  display: block;
+  margin: 0;
+  height: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b6b6bc; }
+
+.CityInfo-Hotels {
+  position: absolute;
+  right: 30px;
+  top: 5px;
+  width: 80px;
+  line-height: 14px;
+  font-size: 12px;
+  text-align: right;
+  color: #b6b6bc; }
+
+.CityInfo-Hotels-Header {
+  text-decoration: none;
+  color: #b6b6bc; }
+  .CityInfo-Hotels-Header:hover {
+    text-decoration: underline; }
+
+.CityInfo-Hotels-Price {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 10px; }
+  .CityInfo-Hotels-Price strong {
+    font-weight: 700;
+    color: #000; }
+
+.TourInfo-Wrapper {
+  
+  margin: auto;
+  width: 100%;
+  height: 118px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 10px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+
+ 
+  display: -ms-flexbox;
+  display: flex; }
+  .CityInfo-Wrapper-Wide .TourInfo-Wrapper {
+    top: -130px; }
+
+  @media (max-width: 640px) {
+    .TourInfo-Wrapper {
+      left: 3px;
+      right: 0;
+      width: 88%;
+      min-width: 325px;
+      top: -125px;
+      margin: 0 auto; } }
+
+
+
+.TourInfo-Airline {
+  min-width: 80px;
+  -ms-flex: 2 1;
+      flex: 2 1;
+  border-left: 1px dashed #ebebee;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  text-align: center; }
+  @media (max-width: 640px) {
+    .TourInfo-Airline {
+      -ms-flex: 3 1;
+          flex: 3 1; } }
+  .TourInfo-Airline img {
+    margin-top: 25px;
+    max-width: 18px;
+    min-height: 18px; }
+  .TourInfo-Airline p {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    min-height: 48px;
+    font-size: 10px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 11px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 15px;
+    white-space: pre-wrap; }
+  .TourInfo-Airline small {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    min-height: 32px;
+    font-size: 10px;
+    margin-top: -26px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #b6b6bc; }
+
+.TourInfo-Stations {
+  padding: 10px 10px 0 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+
+@media (max-width: 640px) {
+  .TourInfo-Cities {
+    left: 0;
+    max-width: 240px;
+    top: -125px; } }
+
+.TourInfo-Cities h4 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  margin: 7px 0 0 20px;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 15px;
+  letter-spacing: normal;
+  color: #000000;
+  width: 224px;
+  min-height: 34px;
+  white-space: pre-wrap; }
+  .TourInfo-Cities h4 span {
+    display: -ms-flexbox;
+    display: flex;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+    text-transform: uppercase;
+    margin-right: 10px; }
+
+.TourInfo-Duration {
+  font-size: 10px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #b6b6bc;
+  border-bottom: 1px solid #b6b6bc;
+  padding-bottom: 5px;
+  -ms-flex: 2 1;
+      flex: 2 1;
+  margin-left: -15px;
+  margin-right: 15px;
+  position: relative; }
+  .TourInfo-Duration::after {
+    display: block;
+    content: '';
+    width: 6px;
+    height: 0;
+    border-top: 1px solid #b6b6bc;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    -webkit-transform: rotate(-30deg);
+        -ms-transform: rotate(-30deg);
+            transform: rotate(-30deg); }
+
+.TourInfo-Station {
+  -ms-flex: 3 1;
+      flex: 3 1; }
+  .TourInfo-Station address {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    margin-top: -15px;
+    font-size: 10px;
+    font-weight: normal !important;
+    letter-spacing: 0.3px !important;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    min-height: 36px;
+    color: #b6b6bc;
+    white-space: pre-wrap;
+    width: 85px;
+    min-height: 36px; }
+  .TourInfo-Station p {
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: -8px;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color: #000000; }
+  .TourInfo-Station small {
+    display: block;
+    margin-top: -4px;
+    font-size: 10px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+    color: #000000; }
+
+.TourInfoSimplified-List {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;}
+  .TourInfoSimplified-List li {
+    display: block; }

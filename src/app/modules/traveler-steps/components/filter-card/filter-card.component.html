@@ -1,0 +1,289 @@
+<div class="hh-search-bar-wrapper">
+    <div class="hh-search-bar-buttons">
+        <div class="hh-button-item button-location form-group mapgoogle-autocomplete-form-custom desktop-search-page">
+            <input type="text" class="form-control mapgoogle-autocomplete-custom" value="Abidjan" placeholder="Entrer une destination..." /><input type="hidden" name="lat" value="5.3364" />
+            <input type="hidden" name="lng" value="-4.033333" />
+            <input type="hidden" name="address" value="Abidjan" />
+            <div id="custom-output-autocomplete" class="pac-container" style="display: none;"></div>
+        </div>
+        <div class="hh-button-item button-date button-date-double form-group" data-date-format="DD-MM-YYYY">
+            <span class="text">Date</span> 
+            <input type="hidden" class="check-in-field" name="checkIn" value="" />
+            <input type="hidden" class="check-out-field" name="checkOut" value="" />
+            <input type="text" class="input-hidden check-in-out-field" name="checkInOut" value="" />
+        </div>
+        <div class="dropdown dropdown-button dropdown-button-price" >
+            <div class="hh-button-item button-price form-group prixMainCustom" >
+                <span class="text button-price-custom" (click)="clickDropdownPrix(true)">Prix</span>
+                <div class="dropdown-menu prix_main_menuDrop" id="prix_main_menu"  >
+                    <input
+                        type="text"
+                        id="price-filter"
+                        name="price_filter"
+                        data-plugin="ion-range-slider"
+                        data-prefix=""
+                        data-postfix="€"
+                        data-min="100"
+                        data-max="1000"
+                        data-from=""
+                        data-to=""
+                        data-skin="round"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="dropdown dropdown-button dropdown-button-more-filter" dropdown [autoClose]="true" [insideClick]="true">
+            <div class="hh-button-item button-more-filter form-group" dropdownToggle aria-controls="more_filtres_main_menu">
+                <span class="text">Plus de filtres</span>
+                <div class="dropdown-menu" id="more_filtres_main_menu"  *dropdownMenu>
+                    <div class="item-filter-wrapper" data-type="home-type">
+                        <div class="label">Type de résidences</div>
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="22" id="home-type22" /><label for="home-type22">Appartement</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="106" id="home-type106" /><label for="home-type106">gîte</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="97" id="home-type97" /><label for="home-type97">Cabane</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="25" id="home-type25" /><label for="home-type25">Duplex</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="24" id="home-type24" /><label for="home-type24">Studio</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="23" id="home-type23" /><label for="home-type23">Villa Basse</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="home-type" value="" />
+                    </div>
+                    <div class="item-filter-wrapper" data-type="home-amenity">
+                        <div class="label">Équipement de la résidence</div>
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="99" id="home-amenity99" /><label for="home-amenity99">Café</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="102" id="home-amenity102" /><label for="home-amenity102">Climatisation</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="100" id="home-amenity100" /><label for="home-amenity100">Fer à repasser</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="104" id="home-amenity104" /><label for="home-amenity104">Machine à laver</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="121" id="home-amenity121" /><label for="home-amenity121">Micro-onde</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="98" id="home-amenity98" /><label for="home-amenity98">Parking gratuit</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="101" id="home-amenity101" /><label for="home-amenity101">Piscine</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="105" id="home-amenity105" /><label for="home-amenity105">Réfrigérateur</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="103" id="home-amenity103" /><label for="home-amenity103">sèche cheveux</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="41" id="home-amenity41" /><label for="home-amenity41">Adapters</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="39" id="home-amenity39" /><label for="home-amenity39">DVD Player</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="44" id="home-amenity44" /><label for="home-amenity44">Sèche-cheveux</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="37" id="home-amenity37" /><label for="home-amenity37">Table</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="36" id="home-amenity36" /><label for="home-amenity36">Telephone</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="38" id="home-amenity38" /><label for="home-amenity38">Television</label></div>
+                                </div>
+                                <div class="col-lg-4 mb-1">
+                                    <div class="item checkbox checkbox-success"><input type="checkbox" value="4" id="home-amenity4" /><label for="home-amenity4">Wifi</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="home-amenity" value="" />
+                    </div>
+                    <a href="javascript:void(0)" class="apply-more-filter btn btn-primary btn-xs right">Appliquer</a>
+                </div>
+            </div>
+        </div>
+        <div class="hh-button-item show-filter form-group" id="show-filter-mobile"><span class="text">Filtres</span></div>
+        <div class="hh-button-item show-map form-group" id="show-map-mobile"><span class="text">Voir sur la carte</span></div>
+    </div>
+    <div class="hh-toggle-map-search">
+        <label for="hh-map-toggle-search" class="text-xs text-gray-700">Voir sur la carte</label>
+        
+          <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+                <input type="checkbox" checked   name="toggle" id="hh-map-toggle-search" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+         </div>
+        
+    </div>
+    <div class="hh-search-bar-toggle"></div>
+    <div id="filter-mobile-box" class="filter-mobile-box">
+        <div class="render-box">
+            <div class="popup-filter-header">
+                <span>Filtres</span>
+                <div class="popup-filter-close">
+                    <i class="hh-icon fa">
+                        <svg height="28px" width="28px" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background: new 0 0 512 512;" xml:space="preserve">
+                            <g fill="#575757">
+                                <g fill="#575757">
+                                    <path
+                                        d="M436.994,74.943c-99.834-99.833-262.285-99.833-362.119,0c-99.834,99.834-99.834,262.275,0,362.109
+            c49.917,49.917,115.493,74.881,181.059,74.881c65.566,0,131.142-24.964,181.059-74.881C485.359,388.692,512,324.393,512,255.997
+            C512,187.603,485.359,123.302,436.994,74.943z M421.908,421.966c-91.52,91.513-240.426,91.524-331.946,0
+            c-91.509-91.516-91.509-240.422,0-331.935c45.76-45.761,105.866-68.64,165.973-68.64c60.106,0,120.213,22.879,165.973,68.64
+            c44.332,44.331,68.754,103.271,68.754,165.966C490.662,318.693,466.24,377.632,421.908,421.966z"
+                                    ></path>
+                                </g>
+                            </g>
+                            <g fill="#575757">
+                                <g fill="#575757">
+                                    <polygon
+                                        points="271.024,255.996 376.648,150.375 361.561,135.289 255.937,240.908 150.318,135.289 135.232,150.375
+            240.851,255.994 142.775,354.065 157.862,369.153 255.937,271.081 361.686,376.83 376.773,361.743 		"
+                                    ></polygon>
+                                </g>
+                            </g>
+                        </svg>
+                    </i>
+                </div>
+            </div>
+            <div class="popup-filter-content">
+                <div class="filter-item">
+                    <p class="filter-item-title">Position géographique</p>
+                    <div class="hh-button-item button-location form-group mapgoogle-autocomplete-form-custom">
+                        <input type="text" class="form-control mapgoogle-autocomplete-custom" value="Abidjan" placeholder="Entrer une destination..." /><input type="hidden" name="lat" value="5.3364" />
+                        <input type="hidden" name="lng" value="-4.033333" /><input type="hidden" name="address" value="Abidjan" />
+                        <div id="custom-output-autocomplete" class="pac-container" style="display: none;"></div>
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <p class="filter-item-title">Date</p>
+                    <div class="hh-button-item button-date button-date-single form-group" data-date-format="DD-MM-YYYY">
+                        <span class="text">Date</span> 
+                        <input type="hidden" class="check-in-field" name="checkIn" value="" />
+                        <input type="hidden" class="check-out-field" name="checkOut" value="" />
+                        <input type="text" class="io-date check-in-out-field" name="checkInOut" value="" />
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <p class="filter-item-title">Prix</p>
+                  
+                    <input
+                        type="text"
+                        id="price-filter-popup"
+                        name="price_filter"
+                        data-plugin="ion-range-slider"
+                        data-prefix=""
+                        data-postfix="€"
+                        data-min="100"
+                        data-max="1000"
+                        data-from=""
+                        data-to=""
+                        data-skin="round"
+                    />
+                </div>
+                <div class="filter-item item-filter-wrapper popup-tax-filter" data-type="home-type">
+                    <p class="filter-item-title">Type de résidences</p>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="22" id="popup-home-type22" /><label for="popup-home-type22">Appartement</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="106" id="popup-home-type106" /><label for="popup-home-type106">gîte</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="97" id="popup-home-type97" /><label for="popup-home-type97">Cabane</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="25" id="popup-home-type25" /><label for="popup-home-type25">Duplex</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="24" id="popup-home-type24" /><label for="popup-home-type24">Studio</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="23" id="popup-home-type23" /><label for="popup-home-type23">Villa Basse</label></div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="home-type" value="" />
+                </div>
+                <div class="filter-item item-filter-wrapper popup-tax-filter" data-type="home-amenity">
+                    <p class="filter-item-title">Équipement de la résidence</p>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="99" id="popup-home-amenity99" /><label for="popup-home-amenity99">Café</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="102" id="popup-home-amenity102" /><label for="popup-home-amenity102">Climatisation</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="100" id="popup-home-amenity100" /><label for="popup-home-amenity100">Fer à repasser</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="104" id="popup-home-amenity104" /><label for="popup-home-amenity104">Machine à laver</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="121" id="popup-home-amenity121" /><label for="popup-home-amenity121">Micro-onde</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="98" id="popup-home-amenity98" /><label for="popup-home-amenity98">Parking gratuit</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="101" id="popup-home-amenity101" /><label for="popup-home-amenity101">Piscine</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="105" id="popup-home-amenity105" /><label for="popup-home-amenity105">Réfrigérateur</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="103" id="popup-home-amenity103" /><label for="popup-home-amenity103">sèche cheveux</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="41" id="popup-home-amenity41" /><label for="popup-home-amenity41">Adapters</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="39" id="popup-home-amenity39" /><label for="popup-home-amenity39">DVD Player</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="44" id="popup-home-amenity44" /><label for="popup-home-amenity44">Sèche-cheveux</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="37" id="popup-home-amenity37" /><label for="popup-home-amenity37">Table</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="36" id="popup-home-amenity36" /><label for="popup-home-amenity36">Telephone</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="38" id="popup-home-amenity38" /><label for="popup-home-amenity38">Television</label></div>
+                            </div>
+                            <div class="col-sm-4 mb-1">
+                                <div class="item checkbox checkbox-success"><input type="checkbox" value="4" id="popup-home-amenity4" /><label for="popup-home-amenity4">Wifi</label></div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="home-amenity" value="" />
+                </div>
+            </div>
+        </div>
+        <div class="popup-filter-footer"><div class="view-result">Afficher le résultat du filtre</div></div>
+    </div>
+</div>

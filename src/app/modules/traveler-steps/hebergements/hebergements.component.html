@@ -1,0 +1,167 @@
+<div class="Travelers" >
+
+    <div class="container-fluid mb-5 mt-5">
+
+        <app-filter-card></app-filter-card>
+        
+        <div class="containerWithMapAndListing">
+
+            <div class="listingsDestinations">
+              <div class="itemCustom">
+
+
+                <div class="hh-service-item home list" *ngFor="let host of hotels;"
+                        (mouseover)="mouseOverEventChange(host,true)" (mouseout)="mouseOverEventChange(host,false)">
+                    <div class="item-inner">
+                        <div class="thumbnail-wrapper">
+                            <div id="hh-item-carousel-{{host.id}}" class="hh-item-carousel carousel slide" data-ride="carousel">
+                                <div class="carousel-inner" role="listbox">
+
+                                    
+                                    <ng-container *ngFor="let imgData of host.images; let i=index;">
+
+                                        <div class="carousel-item"   [ngClass]=" i===0 ? 'active' : ''">
+                                            <a href="#"
+                                            class="carousel-cell">
+                                                <img src="{{ imgData.src }}"
+                                                    alt="{{host.name}}"/>
+                                            </a>
+                                        </div>
+
+                                    </ng-container>
+                                        
+                                    
+                                    
+                                </div>
+                                <a class="carousel-control-prev" href="#hh-item-carousel-{{host.id}}" role="button" data-slide="prev">
+                                    <i class="fa fa-angle-left"></i>
+                                    <span class="sr-only">Retour</span>
+                                </a>
+                                <a class="carousel-control-next" href="#hh-item-carousel-{{host.id}}" role="button" data-slide="next">
+                                    <i class="fa fa-angle-right"></i>
+                                    <span class="sr-only">Suivant</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="home-type">
+                                    {{host.type}}
+                                </div>
+                                <div class="rating">
+                                    <span>Selectionner</span>
+                                </div>
+                            </div>
+                            <h3 class="title">
+                                <a href="#" 
+                                   target="_blank" style="color: #ffc05e;font-family: 'Wildy_Sans';font-weight: 100;font-size: 1.9rem;">
+                                   {{host.name}}
+                                </a>
+                            </h3>
+                
+                            <div style="display: flex;
+                                        flex-direction: row;
+                                        justify-content: center;
+                                        align-items: center;">
+
+                                    <div  style=" display: inline-block;  right: 45%;
+                                    width: 8%;
+                                    top: 23%;
+                                    height: 53%;
+                                    margin-bottom: 13px;">
+                                        <img src="assets/images/placeholder.png" style="width: 18px;">
+                                    </div>
+                                    <p class="address text-overflow">
+                                        {{host.emplacement}}
+                                    </p>
+                                    
+
+                            </div>
+                           
+                              
+                                
+                            <div class="facilities">
+                                <div style="display: flex;
+                                                            flex-direction: row;
+                                                            justify-content: start;
+                                                            align-items: start;">
+
+                                            <div style=" display: inline-block;  right: 45%;
+                                            width: 15%;
+                                            top: 23%;
+                                            height: 53%;
+                                            margin-bottom: 0px;">
+                                                     <i class="fas fa-users"></i> 
+                                            </div>
+                                            {{host.nbre_personne}}
+                                </div>
+                                <div style="display: flex;
+                                flex-direction: row;
+                                justify-content: start;
+                                align-items: start;">
+
+                                                <div style=" display: inline-block;  right: 45%;
+                                                width: 15%;
+                                                top: 23%;
+                                                height: 53%;
+                                                margin-bottom: 0px;">
+                                                        <i class="fas fa-bed"></i> 
+                                                </div>
+                                                {{host.chambre}}
+                                    </div>
+                                <!--<div class="item max-baths">
+                                    1 salle de bain
+                                </div> -->
+                            </div>
+                            <div class="meta-footer" style="margin-bottom: -15px;">
+                                <div class="price-wrapper" style="display: flex;
+                                                                flex-direction: row;
+                                                                justify-content: center;
+                                                                align-items: center;">
+
+                                   <span style="font-size: 0.7rem !important;">A partir de &nbsp;&nbsp;&nbsp; </span> 
+                                    <span class="price" style="margin-top: 0px;
+                                    margin-bottom: 1px;"> {{host.tarif}} € /</span>
+                                    <div style=" display: inline-block;  left: 45%;
+                                    width: 15%;
+                                    top: 23%;
+                                    height: 53%;
+                                    margin-bottom: 0px;">
+                                     <img src="assets/images/moon.png" style="width: 30px;">
+                                    </div>
+                                   
+                                </div>
+                                <span class="price" style="font-size: 0.7rem !important; color:tomato;">1150 € au total</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              </div>
+           </div>
+
+            <div class="mapContainer" *ngIf="DisplayCarte">
+                
+              <div id="map" class="map-container"> 
+                <div class="hh-close-map-popup" id="hide-map-mobile">Fermer</div>
+                <div class="hh-map-tooltip">
+                    <div class="checkbox checkbox-success">
+                        <input id="chk-map-move" type="checkbox" name="map_move" value="1">
+                        <label for="chk-map-move">Search as I move the map</label>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

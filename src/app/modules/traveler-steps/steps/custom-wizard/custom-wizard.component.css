@@ -1,0 +1,502 @@
+.Travelers {
+    text-align: center;
+    padding-top: 70px;
+  }
+  
+  @media (max-width: 600px) {
+    .Travelers {
+      padding-top: 5px;
+      padding-bottom: 20px;
+    } 
+  }
+  
+  .Travelers h2 {
+    color: #35989b;
+    /* text-shadow: 0.2px 0.2px 0.4px #2f888b; */
+  }
+
+  .AddTraveler {
+    display: inline-block;
+    background-color: #ffa45e;
+  /*   margin-left: 10px;
+    margin-bottom: -5px; */
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Safari and Chrome */
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  .AddTraveler:hover {
+    opacity: 1;
+  }
+  
+  .AddTraveler:before,
+  .AddTraveler:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: white;
+  }
+  
+  .AddTraveler:before {
+    left: 45%;
+    width: 8%;
+    top: 24%;
+    height: 50%;
+  }
+  
+  .AddTraveler:after {
+    top: 45%;
+    height: 8%;
+    width: 50%;
+    left: 24%;
+  }
+
+  
+  .Spinner {
+    position: relative;
+  }
+  
+  .Spinner span {
+    position: absolute;
+    color: #ffa45e;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 70px;
+    margin-left: -20px;
+  }
+  
+  .Loader {
+    color: #ffa45e;
+    font-size: 90px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin: 72px auto;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+    animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+  }
+  
+  @-webkit-keyframes load6 {
+    0% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+        0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+        0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em,
+        -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em,
+        -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+        -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
+        -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+        -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+        -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+        0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+  }
+  @keyframes load6 {
+    0% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+        0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+        0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em,
+        -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em,
+        -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+        -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
+        -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+        -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+        -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+        0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+  }
+  @-webkit-keyframes round {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes round {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+.ResultsControls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.SwitchButton {
+  display: flex;
+  align-items: center;
+  border: 2px solid #f19e8f;
+  border-radius: 5px;
+  padding: 10px 10px;
+  padding-left: 50px;
+  position: relative;
+  margin: 5px;
+  cursor: pointer;
+}
+.SwitchButton .SwitchLabel {
+  color: #918380;
+  font-weight: 600;
+  margin-right: 8px;
+}
+.SwitchButton:hover {
+  border: 3px solid #f19e8f;
+  margin: 4px 5px;
+}
+.SwitchButton:before {
+  content: " ";
+  position: absolute;
+  left: 10px;
+  top: 24%;
+ /* background-image: url("..assets/waves/wave-orange.png");*/
+ background-image: url("../../../../../assets/waves/wave-orange.png");
+  background-size: cover;
+  width: 30px;
+  height: 20px;
+}
+.SwitchButton div {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+.SwitchButton div span {
+  display: inline-block;
+  color: #f19e8f;
+  font-weight: 600;
+  transform: rotate(90deg);
+  margin: -4px 0;
+}
+
+
+
+/* CHECKBOX TOGGLE SWITCH */
+/* @apply rules for documentation, these do not work as inline style */
+.toggle-checkbox:checked {
+  @apply: right-0 border-orange-400;
+  right: 0;
+  border-color: #ffa45e;
+}
+.toggle-checkbox:checked + .toggle-label {
+  @apply: bg-orange-400;
+  background-color: #ffa45e;
+}
+
+
+.new_loop_request_date {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: #155282;
+    /* border: 1px solid #155282; */
+    background-color: #fff;
+    line-height: 1;
+    transition: color .3s ease-in-out,background-color .3s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out, transform .3s ease-in-out, font-size .3s ease-in-out;
+    border-radius: 50vh;
+    margin-bottom: .375rem;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+    padding: 11px;
+    font-size: 19px;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgb(50 50 93 / 30%), 0 1px 3px rgb(0 0 0 / 30%);
+}
+
+.streamers {
+  display: flex;
+  text-align: center;
+}
+.streamers img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.SubmitButton {
+    display: inline-block;
+    background-color: #ffa45e;
+    color: white;
+    font-family: "Wildy_Sans";
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-weight: 500;
+    font-size: smaller;
+    text-decoration: none;
+    box-shadow: 1px 1px 3px gray;
+    border: 1px solid transparent;
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 600px) {
+    .SubmitButton {
+        font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .AddTraveler {
+        
+        margin-right: 50px;
+    }
+  }
+  
+  .SubmitButton:hover {
+      box-shadow: 2px 2px 3px gray;
+      border: 1px solid gray;
+  }
+
+
+  .PrevButton {
+    display: inline-block;
+    background-color: #35989b;
+    color: white;
+    font-family: "Wildy_Sans";
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-weight: 500;
+    font-size: smaller;
+    text-decoration: none;
+    box-shadow: 1px 1px 3px gray;
+    border: 1px solid transparent;
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 600px) {
+    .PrevButton {
+        font-size: 1rem;
+    }
+  }
+  
+  .PrevButton:hover {
+      box-shadow: 2px 2px 3px gray;
+      border: 1px solid gray;
+  }
+
+ 
+
+
+
+
+  .map-container {
+    margin-top: 10px;
+    width: 100%;
+    height: 100%; 
+    position: relative;
+    }
+
+    .overlay {
+position: relative;
+top: -750px;
+left: 10px;
+}
+ 
+.overlay select {
+
+display: inline-block;
+margin: 0;
+padding: 10px 20px;
+
+}
+
+.mapboxgl-marker{
+  cursor: pointer;
+  }
+   
+  .mapboxgl-popup {
+  max-width: 200px;
+  }
+
+
+
+  .TravelResults_Selection__hoAZU {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.TravelResults_TravelResults__2C8Mm {
+  text-align: center;
+  padding-left: min(4.5vw,50px);
+  padding-right: min(4.5vw,50px);
+}
+.TravelResults_SelectionItem__15KDO {
+  color: #35989b;
+  font-weight: 700;
+  background-color: rgba(150,201,203,.3);
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 5px;
+}
+
+.TravelResults_CloseSelectionItem__2_B9M {
+  display: inline-block;
+  background-color: #35989b;
+  margin-left: 10px;
+  margin-bottom: -5px;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transform: rotate(
+45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(
+45deg);
+    opacity: .8;
+}
+.TravelResults_CloseSelectionItem__2_B9M:before {
+  left: 45%;
+  width: 8%;
+  top: 23%;
+  height: 53%;
+}
+
+.TravelResults_CloseSelectionItem__2_B9M:after {
+  top: 45%;
+  height: 8%;
+  width: 53%;
+  left: 23%;
+}
+.TravelResults_CloseSelectionItem__2_B9M:after,
+.TravelResults_CloseSelectionItem__2_B9M:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #fff;
+}
+
+
+
+
+/*
+.social-buttons {
+    margin: auto;
+}
+.social-buttons button {
+    margin-right: 10px
+}
+*/
+.neo-button {
+  display: inline-block;
+  background-color: #35989b;
+  color: white;
+  /*font-family: "Wildy_Sans";*/
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-weight: 500;
+  font-size: smaller;
+  text-decoration: none;
+  box-shadow: 1px 1px 3px gray;
+  border: 1px solid transparent;
+  /*font-size: 1.3rem;*/
+}
+
+.neo-button:hover {
+    box-shadow: inset 6px 6px 13px #489dcf, inset -6px -6px 13px #62d5ff
+}
+
+
+
+/* map */
+
+.wrapperWithCarte {
+  position: relative;
+  flex: 1;
+  order: 2;
+  display: block;
+  margin-top: 0;
+}
+
+
+
+
+/* custom new */
+
+.containerWithMapAndListing {
+  display: flex;
+  flex-grow: 10;
+  height: 560px;
+
+}
+
+.listingsDestinations {
+  flex-grow: 1;
+ /*  background: purple; */
+ margin-top: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.mapContainer {
+  width: 600px;
+  /*background: blue;*/
+}
+
+@media only screen and (max-width: 667px) {
+  .mapButtonCustom {
+      display: none !important;
+  }
+
+  
+}

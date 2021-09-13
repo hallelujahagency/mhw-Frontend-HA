@@ -1,0 +1,74 @@
+.Travelers {
+    text-align: center;
+    padding-top: 120px; 
+  }
+  
+  @media (max-width: 600px) {
+    .Travelers {
+      padding-top: 5px;
+      padding-bottom: 20px;
+    } 
+  }
+  
+  .Travelers h2 {
+    color: #35989b;
+    /* text-shadow: 0.2px 0.2px 0.4px #2f888b; */
+  }
+  
+  .Travelers .List {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 600px) {
+    .Travelers .List {
+      flex-direction: column;
+    }
+  }
+  
+  .AddTraveler {
+    display: inline-block;
+    background-color: #ffa45e;
+    margin-left: 10px;
+    margin-bottom: -5px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Safari and Chrome */
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  .AddTraveler:hover {
+    opacity: 1;
+  }
+  
+  .AddTraveler:before,
+  .AddTraveler:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: white;
+  }
+  
+  .AddTraveler:before {
+    left: 45%;
+    width: 8%;
+    top: 24%;
+    height: 50%;
+  }
+  
+  .AddTraveler:after {
+    top: 45%;
+    height: 8%;
+    width: 50%;
+    left: 24%;
+  }
+  

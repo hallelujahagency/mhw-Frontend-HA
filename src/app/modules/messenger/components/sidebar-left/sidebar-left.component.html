@@ -1,0 +1,143 @@
+<aside class="chitchat-left-sidebar left-disp">
+    <div class="recent-default dynemic-sidebar active">
+      
+      <div class="chat custom-scroll">
+
+        <ul class="chat-cont-setting">
+          <li> <a (click)="openModal(createConversationModal)"><span>Message</span>
+              <div class="icon-btn btn-outline-primary button-effect btn-sm" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div></a></li>
+
+                <li> 
+                      <a href="#" data-toggle="modal" data-target="#msgchatModal"><span>Groupe</span>
+                        <div class="icon-btn btn-outline-danger button-effect btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                    </a>
+              </li>
+        </ul>
+
+  
+      
+        <div class="theme-title">
+          <div class="media">
+            <div> 
+              <!-- <h2 class="cursor-pointer" (click)= "onClickAccueil()">Meethalfway</h2> 
+              <h4>Messenger</h4>-->
+              <img class="logo-compact cursor-pointer" (click)= "onClickAccueil()" src="assets/images/MHw-logo-desktop.png" alt="">
+              
+            </div>
+            <div class="media-body text-right">  
+              <a class="icon-btn btn-light btn-sm button-effect mode" href="#" data-tippy-content="Theme Mode" data-intro="Change mode"><i class="fa fa-moon-o"></i></a>
+              <a class="icon-btn btn-primary btn-fix chat-cont-toggle outside" href="#" (click)="false"><i data-feather="plus"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="theme-tab tab-sm chat-tabs">     
+       
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="chat" role="tabpanel" aria-labelledby="chat-tab"> 
+              <div class="theme-tab">       
+                <ul class="nav nav-tabs" id="myTab1" role="tablist">
+                  <li class="nav-item"><a class="nav-link button-effect active" (click)="onChangeTab()" id="direct-tab" data-toggle="tab" href="#direct" role="tab" aria-controls="direct" aria-selected="false" data-to="blank">Direct</a></li>
+                  <li class="nav-item"><a class="nav-link button-effect" (click)="onChangeTab()" id="group-tab" data-toggle="tab" href="#group" role="tab" aria-controls="group" aria-selected="true" data-to="group_chat">Groupe</a></li>
+                </ul>
+                <div class="tab-content" id="myTabContent1">
+                  <div class="tab-pane fade show active" id="direct" role="tabpanel" aria-labelledby="direct-tab"> 
+                    <div class="search2">
+                      <div>
+                        <div class="input-group">
+                          <div class="input-group-append"><span class="input-group-text"><i class="fa fa-search"></i></span></div>
+                          <input class="form-control" type="text" placeholder="Rechercher..."/>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="chat-main" *ngIf="itemsDirectCustom">
+
+
+                     
+                      <app-conversation-list   *ngFor="let direct of itemsDirectCustom" [direct]="direct" (onClickSidebar)="onClickSidebar($event)"
+                                                [directItemActive]="directItemActive" [groupItemActive]="groupItemActive" ></app-conversation-list>
+          
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="group" role="tabpanel" aria-labelledby="group-tab"> 
+                    <div class="search2">
+                      <div>
+                        <div class="input-group">
+                          <div class="input-group-append"><span class="input-group-text"><i class="fa fa-search"></i></span></div>
+                          <input class="form-control" type="text" placeholder="Rechercher..."/>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="group-main">
+                    <!--  <li class="cursor-pointer" (click)="onClickSidebar(group.index,'group')" [ngClass]=" groupItemActive === group.index ? 'active' : ''"  *ngFor="let group of itemsGroup">
+                        <div class="group-box">
+                          <div class="profile">
+                            <img class="bg-img" [src]="group.img" alt="Avatar"/>
+                          </div>
+                          <div class="details">
+                            <h5 [innerText]="group.title"></h5>
+                            <h6 [innerText]="group.msg"></h6>
+                          </div>
+                            <div class="date-status">
+                            <ul class="grop-icon">
+                              <li><a class="group-tp" href="#" data-tippy-content="Josephin"> <img src="assets/images/contact/1.jpg" alt="group-icon-img"/></a></li>
+                              <li><a class="group-tp" href="#" data-tippy-content="Jony "> <img src="assets/images/contact/2.jpg" alt="group-icon-img"/></a></li>
+                              <li><a class="group-tp" href="#" data-tippy-content="Pabelo"> <img src="assets/images/contact/3.jpg" alt="group-icon-img"/></a></li>
+                              <li>+ 35</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>-->
+                    
+                     
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </aside>
+
+
+  <ng-template #createConversationModal>
+
+    <div class="modal-content add-popup msg-chat-modal">
+      <div class="modal-header">
+        <h2 class="modal-title">
+           Une nouvelle conversation
+        </h2>
+        <button class="close" type="button" (click)="modalRef.hide()"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="chat-msg-search">
+          <div class="input-group">
+            <input class="form-control" type="text" [(ngModel)]="searchUserText" (ngModelChange)="SendUserNameChange()" placeholder="Rechercher..." aria-label="Recipient's username" aria-describedby="basic-addon21">
+            <div class="input-group-append"><span class="input-group-text" id="basic-addon21">@</span></div>
+          </div>
+        </div>
+        <ul class="chat-main custom-scroll" *ngIf="suggestionsUsers.length">
+
+          <li class="cursor-pointer" *ngFor="let user of suggestionsUsers;let i=index" (click)="createConversation(user)">
+            <div class="chat-box">
+              <div class="profile bg-size" style="background-image: url(&quot;{{user.photo}}&quot;);
+                                                           background-size: cover; background-position: center center;
+                                                            display: block;" [ngClass]="user.statut === 'En ligne' ? 'online' : 'offline'">
+                </div>
+              <div class="details">
+                <h5 [innerText]="user.fullname"></h5>
+              </div>
+            </div>
+          </li>
+        
+       
+         
+        </ul>
+      </div>
+    </div>
+
+</ng-template>

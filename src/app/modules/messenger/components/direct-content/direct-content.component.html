@@ -1,0 +1,126 @@
+<div class="contact-details" >
+    <div class="row">
+      <form class="form-inline search-form">
+        <div class="form-group">
+          <input class="form-control-plaintext" type="search" placeholder="Rechercher.."/>
+          <div class="icon-close close-search">   </div>
+        </div>
+      </form>
+      <div class="col-7">
+        <div class="media left">
+          <div class="media-left mr-3" *ngIf="Cardprofil">
+            <div class="profile menu-trigger bg-size" (click)="getOpenClose()" [ngClass]="Cardprofil.statut === 'En ligne' ? 'online' : 'offline'"
+                   style="background-image: url('{{Cardprofil.photo}}'); background-size: cover; background-position: center center; display: block;">
+            
+            </div>
+          </div>
+          <div class="media-body" *ngIf="Cardprofil">
+            <h5 [innerText]="Cardprofil.fullname"></h5>
+            <div class="badge badge-success" *ngIf="Cardprofil.statut === 'En ligne'">En ligne</div>
+            <div class="badge badge-danger" *ngIf="Cardprofil.statut === 'Hors-ligne'">Hors ligne</div>
+          </div>
+          <div class="media-right">
+            <ul>
+              <li><a class="icon-btn btn-light button-effect mute" style="display:none;" href="#"><i class="fa fa-volume-up"></i></a></li>
+              <li><a class="icon-btn btn-light search-right" style="display:none;" href="#"><i data-feather="search"></i></a></li>
+              <li><a class="icon-btn btn-light button-effect mobile-sidebar" href="#"><i data-feather="chevron-left"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <ul class="calls text-right">
+          <li><a class="icon-btn btn-light button-effect" href="#" data-tippy-content="Appel vocal" ><i data-feather="phone"></i></a></li>
+          <li><a class="icon-btn btn-light button-effect" href="#" data-tippy-content="Appel video" ><i data-feather="video"></i></a></li>
+         
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="contact-chat">
+    <ul class="chatappend" *ngIf="conversationActive">
+
+      <ng-container *ngFor="let item of conversationActive.messages">
+
+          <li class="" [ngClass]="item.sender_id === userConnect.uuid ? 'replies' : 'sent'">
+            <div class="media">          
+              <div class="media-body">
+                <div class="contact-name">
+                  <h6>{{  (item.created_at | amLocale:'fr' | amCalendar)}} </h6>
+                  <ul class="msg-box">
+                    <li class="msg-setting-main">
+                            <h5 [innerText]="item.message" *ngIf="item.message_type === 'text'"></h5>
+
+                            <ul class="auto-gallery" lightbox-group *ngIf="item.message_type === 'medias'" >
+                              <li   *ngFor="let file of item.messagefile">
+
+                                  <img class="bg-size" [src]="urlBack+file.file_url" lightbox 
+                                        [fullImage]="{path: urlBack+file.file_url }" backgroundColor="white" 
+                                        style="background-size: cover;border-radius: 10px; background-position: center center; display: block; height: 100%;"/>
+                              </li>
+                            </ul>
+
+                            <div class="document" *ngIf="item.message_type === 'document'">
+                              <i class="fa fa-file-excel-o font-primary"></i>
+                                <div class="details">
+                                  <h5>Document.xlsx</h5>
+                                  <h6>25mb Seprate file</h6>
+                                </div>
+                                <div class="icon-btns">
+                                  <a class="icon-btn btn-outline-light" href="https://themes.pixelstrap.com/chitchat/assets/doc/Document.xlsx" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                  </a>
+                                </div>
+                            </div>
+
+                            <div class="msg-dropdown-main">
+                              <div class="msg-setting"><i class="ti-more-alt"></i></div>
+                              <div class="msg-dropdown"> 
+                                <ul>
+                                  <li><a href="#"><i class="fa fa-share"></i>forward</a></li>
+                                  <li><a href="#"><i class="fa fa-clone"></i>copy</a></li>
+                                  <li><a href="#"><i class="fa fa-star-o"></i>rating</a></li>
+                                  <li><a href="#"><i class="ti-trash"></i>delete</a></li>
+                                </ul>
+                              </div>
+                            </div>
+
+                          
+                      
+                    </li>
+                  
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+      </ng-container>
+
+      <li class="sent last typing-m" *ngIf="typing"> 
+        <div class="media">
+           <div class="media-body"> 
+             <div class="contact-name"> 
+                <ul class="msg-box"> 
+                  <li> 
+                    <h5> 
+                      <div class="type"> 
+                       <div class="typing-loader"></div>
+                      </div>
+                    </h5> 
+                </li>
+              </ul> 
+            </div>
+          </div>
+        </div>
+      </li>
+
+       
+
+
+
+
+    </ul>
+  </div>
+
+  

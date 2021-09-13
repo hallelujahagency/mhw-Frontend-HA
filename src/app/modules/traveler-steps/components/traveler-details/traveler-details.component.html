@@ -1,0 +1,188 @@
+
+            <div  class="row" > 
+                            <div class="col-lg-4 col-4">
+                                <div class="streamers">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" class="ml-3">
+
+                                    <span class="ml-3 mt-2" style="color:hsl(182, 49%, 41%)" [innerText]="userData.nameVoyager"></span> 
+                                </div>
+                                
+                            </div> 
+                            <div class="col-lg-3 col-3">
+                                <span class="text-start ml-1" >{{ priceTotal }} €</span>
+                                
+                            </div>
+                            <div class="col-lg-3 col-3">
+                                <span class="bookButtom ml-1 mb-2 cursor-pointer" style="margin-right: 30px;" [routerLink]="'/paiement'">Reserver</span> 
+                                
+                            </div>
+                            <div class="col-lg-2 col-2">
+                                <img src="assets/images/plus.png" style="width: 18px; height:18px;margin-top: 10px;" alt="plus-details" (click)="onClickSeeDetailTicket()" *ngIf="!detailTicket">
+
+                                <img src="assets/images/moins.png" style="width: 18px; height:18px;margin-top: 10px;" alt="moins-details" (click)="onClickSeeDetailTicket()" *ngIf="detailTicket">
+                                 
+                            </div>
+                        
+                            <ng-container *ngIf="detailTicket" class="mb-2">                               
+
+                                <div class="row mt-2 mb-2 ticketInfos" (click)="openModal(changeTicketModal)">
+                                    <div class="col-12 mt-1 mb-3" >
+                                        <h4 class="col-12 mt-1 mb-3" [innerText]="userData.station.name"></h4>
+                                    </div>
+                                    <div class="ticketInfoTransport col-lg-2 ml-5">
+                                        <i class="fas fa-train mt-3"></i>
+                                        <span style="margin: auto; text-align: center;">6773</span>
+                                    </div>
+                                    <div class="ticketInfoDetails col-lg-8" style="cursor: pointer;">
+                                        <div class="ticketDetailsInfos">
+                                            <div class="ticketInfoStation">
+                                                <small class="mb-2">SNCF</small>
+                                                <span>15:50</span>
+                                                <small>NTE</small>
+                                                <i>Non-stop</i>
+                                            </div>
+                                            <div class="TourInfoMap-Duration">3h 10m</div>
+                                            <div class="ticketInfoStation">
+                                                <small class="mb-2">35 €</small>
+                                                <span>20:00</span>
+                                                <small>MRS</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                         
+                                <div class="row mt-2 mb-3  ticketInfos" (click)="openModal(changeTicketModal)">
+                                    <div class="col-12 mt-1 mb-3" >
+                                        <h4 class="col-12 mt-1 mb-3" [innerText]="nameDestination"></h4>
+                                    </div>
+                                    <div class="ticketInfoTransport col-lg-2 ml-5">
+                                        <i class="fas fa-train mt-3"></i>
+                                        <span style="margin: auto; text-align: center;">6773</span>
+                                    </div>
+                                    <div class="ticketInfoDetails col-lg-8" style="cursor: pointer;">
+                                        <div class="ticketDetailsInfos">
+                                            <div class="ticketInfoStation">
+                                                <small class="mb-2">SNCF</small>
+                                                <span>15:50</span>
+                                                <small>NTE</small>
+                                                <i>Non-stop</i>
+                                            </div>
+                                            <div class="TourInfoMap-Duration">3h 10m</div>
+                                            <div class="ticketInfoStation">
+                                                <small class="mb-2">35 €</small>
+                                                <span>20:00</span>
+                                                <small>MRS</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </ng-container>
+            </div>
+
+
+   
+
+
+    <ng-template #changeTicketModal>
+
+        <div class="modal-content">
+            <div class="modal-header">
+              
+                <h4 class="title" style="margin:auto;color:#35989b;">Changer de ticket</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="fixed-section onlyFixed">
+                        <section  class="trip isCurrent mt-4">
+                            <div  class="info ">
+                                <div  class="row-custom ">
+                                    <div  class="airlines">
+                                            <img  
+                                                    src="https://airhopping.blob.core.windows.net/static/airline/tp.png" 
+                                                    class="" aria-describedby="cdk-describedby-message-2"
+                                                    cdk-describedby-host="" 
+                                                    style="left: 0px; top: 4px;">
+                                                    <!----><!---->
+                                    </div>
+                                    <div  class="city">
+                                        <span > ABJ </span>
+                                        <span  class="departure-time">23:50</span>
+                                    </div>
+                                    <div  class="scales-info">
+                                        <div  class="duration">8h 25m</div>
+                                        <div  class="separator">
+                                            <div  class="stop "></div>
+                                                <!----><!----><!---->
+                                        </div>
+                                        <div  class="scales">
+                                            <!---->
+                                            <span  class=""> 1 
+                                                <label >escale<!----><!----></label>
+                                                <span  style="font-weight: 500; opacity: 0.5;"> LIS</span>
+                                            </span><!---->
+                                        </div>
+                                    </div>
+                                    <div  class="city">
+                                        <span > MAD </span>
+                                        <span  class="departure-time">10:15</span>
+                                    </div>
+                                    
+                                </div><!---->
+                            </div><!---->
+                            <div  class="price-wrapper">
+                                <span  class="price">+0&nbsp;€</span>
+                                <span  class="color-accent ">Valeur actuelle</span>
+                                <!----><!---->
+                            </div>
+                        </section>
+
+                        <section  class="trip mt-4">
+                            <div  class="info ">
+                                <div  class="row-custom ">
+                                    <div  class="airlines">
+                                            <img  
+                                                    src="https://airhopping.blob.core.windows.net/static/airline/fr.png" 
+                                                    class="" aria-describedby="cdk-describedby-message-2"
+                                                    cdk-describedby-host="" 
+                                                    style="left: 0px; top: 4px;">
+                                                    <!----><!---->
+                                    </div>
+                                    <div  class="city">
+                                        <span > ABJ </span>
+                                        <span  class="departure-time">23:50</span>
+                                    </div>
+                                    <div  class="scales-info">
+                                        <div  class="duration">8h 25m</div>
+                                        <div  class="separator">
+                                            <div  class="stop "></div>
+                                                <!----><!----><!---->
+                                        </div>
+                                        <div  class="scales">
+                                            <!---->
+                                            <span  class=""> 1 
+                                                <label >escale<!----><!----></label>
+                                                <span  style="font-weight: 500; opacity: 0.5;"> LIS</span>
+                                            </span><!---->
+                                        </div>
+                                    </div>
+                                    <div  class="city">
+                                        <span > MAD </span>
+                                        <span  class="departure-time">10:15</span>
+                                    </div>
+                                    
+                                </div><!---->
+                            </div><!---->
+                            <div  class="price-wrapper">
+                                <span  class="price">+14&nbsp;€</span>
+                                <span  style="color:#0e8c77!important;">Selectionner</span>
+                                <!----><!---->
+                            </div>
+                        </section>
+                </div>
+            </div>
+
+        </div>
+
+   
+    </ng-template>

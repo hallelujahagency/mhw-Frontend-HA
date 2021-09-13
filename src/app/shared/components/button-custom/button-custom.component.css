@@ -1,0 +1,25 @@
+.SubmitButton {
+    display: inline-block;
+    background-color: #ffa45e;
+    color: white;
+    font-family: "Wildy_Sans";
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-weight: 500;
+    font-size: smaller;
+    text-decoration: none;
+    box-shadow: 1px 1px 3px gray;
+    border: 1px solid transparent;
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 600px) {
+    .SubmitButton {
+        font-size: 1rem;
+    }
+  }
+  
+  .SubmitButton:hover {
+      box-shadow: 2px 2px 3px gray;
+      border: 1px solid gray;
+  }

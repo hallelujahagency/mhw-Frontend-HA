@@ -1,0 +1,58 @@
+
+  .TravelResults_Selection__hoAZU {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.TravelResults_TravelResults__2C8Mm {
+  text-align: center;
+  padding-left: min(4.5vw,50px);
+  padding-right: min(4.5vw,50px);
+}
+.TravelResults_SelectionItem__15KDO {
+  color: #35989b;
+  font-weight: 700;
+  background-color: rgba(150,201,203,.3);
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 5px;
+}
+
+.TravelResults_CloseSelectionItem__2_B9M {
+  display: inline-block;
+  background-color: #35989b;
+  margin-left: 10px;
+  margin-bottom: -5px;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transform: rotate(
+45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(
+45deg);
+    opacity: .8;
+}
+.TravelResults_CloseSelectionItem__2_B9M:before {
+  left: 45%;
+  width: 8%;
+  top: 23%;
+  height: 53%;
+}
+
+.TravelResults_CloseSelectionItem__2_B9M:after {
+  top: 45%;
+  height: 8%;
+  width: 53%;
+  left: 23%;
+}
+.TravelResults_CloseSelectionItem__2_B9M:after,
+.TravelResults_CloseSelectionItem__2_B9M:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #fff;
+}
+

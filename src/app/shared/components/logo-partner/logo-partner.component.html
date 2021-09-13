@@ -1,0 +1,25 @@
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="section-title desktop-center padding-bottom-40">
+                <h3 class="title social-title" style="font-family: Wildy_Sans;">Nos partenaires: Ils nous soutiennent au quotidien</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="client-area">
+                
+                <ngx-slick-carousel class="carousel client-active-area" 
+                                        #slickModal="slick-carousel"  [config]="slideConfig" >
+
+                    <div ngxSlickItem *ngFor="let slide of slideDataLogo" class="slide single-brand">
+                        <a [href]="slide.url" target="_blank"><img [src]="slide.img" alt="" width="200px"></a>
+                    </div>
+
+                  
+                </ngx-slick-carousel>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="form-head mb-4">
+    <h2 class="text-black font-w600 mb-0">Liste des projets</h2>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-responsive-md">
+                        <thead>
+                            <tr>
+                            
+                                <th><strong>ID</strong></th>
+                                <th><strong>Nom du projet</strong></th>
+                                <th><strong>Nombre de voyageurs</strong></th>
+                                <th><strong>Status</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let projet of projects">
+                              
+                                <td><strong [innerText]="projet.uuid"></strong></td>
+                                <td><div class="d-flex align-items-center cursor-pointer" (click)="onClickEditProjet(projet.slug)"><span class="w-space-no" [innerText]="projet.name"></span></div></td>
+                                <td>{{ getNombreUsers(projet.users) }}</td>
+                                <td><div class="d-flex align-items-center"><i class="fa fa-circle text-success mr-1"></i>En attente de paiement</div></td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a (click)="onClickEditProjet(projet.slug)" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

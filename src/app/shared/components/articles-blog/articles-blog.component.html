@@ -1,0 +1,33 @@
+<!-- Blog Section  -->
+<section class="blog-area padding-top-110 padding-bottom-45">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="section-title brand desktop-center padding-bottom-50">
+                    <p>{{'pageAccueil.articlesBlogTitle' | translate}}</p>
+                    <h3 class="title" style="font-family: Wildy_Sans;">{{'pageAccueil.articlesBlogDescription' | translate}}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-6 col-lg-4" *ngFor="let article of articles; let i=index;">
+                <div class="single-blog-grid-01 margin-bottom-30">
+                    <div class="thumb">
+                        <img [src]="article.img" alt="blog image">
+                        <div class="news-date">
+                            <h5 class="title" [innerHtml]="article.createdAt"></h5>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h4 class="title"><a routerLink="../blog" [innerHtml]="article.title">
+                        </a></h4>
+                        <p [innerHtml]="article.description"></p>
+                    </div>
+                </div>
+            </div>
+            
+           
+        </div>
+    </div>
+</section>

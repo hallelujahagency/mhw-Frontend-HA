@@ -1,0 +1,109 @@
+
+  
+      <form  class="wrap emojis-main" role="form" (ngSubmit)="sendMessageText()">
+             <!-- <div class="dot-btn dot-primary mr-3">
+                <a class="icon-btn btn-outline-primary button-effect toggle-emoji" (click)="false" href="#">
+                  <i data-feather="smile"></i>
+                </a>
+              </div>-->
+              <div class="contact-poll">
+                <a class="icon-btn btn-outline-primary mr-4 outside" (click)="false" href="#">
+                  <i class="fa fa-plus"></i>
+                </a>
+                <div class="contact-poll-content">
+                  <ul>
+                    <li><a (click)="imageUplaod()"><i data-feather="image"></i>gallerie</a></li>
+                    <!-- <li><a href="#"><i data-feather="camera"></i>camera</a></li> -->
+                    <li><a href="#"><i data-feather="clipboard"> </i>document</a></li>
+                    <li><a href="#"><i data-feather="paperclip"></i>Fichier</a></li>
+                  </ul>
+                  <input type="file" style="display:none;"  (change)="onFileChange($event)"  
+                          class="post-images-upload hidden" multiple=""
+                          accept="image/jpeg,image/png,image/gif" name="fileImage">
+
+                    <!-- <input type="file" style="display:none;" (change)="onFileChangeVideo($event)" 
+                        class="post-video-upload hidden"  accept="video/mp4" 
+                        name="post_video_upload" > -->
+                </div>
+              </div>
+              <input autocomplete="off" class="setemoj" name="text" 
+                    [(ngModel)]="textMessage" (ngModelChange)="SendmessageChange()"  
+                    id="setemoj" type="text" placeholder="Ecrire..." />
+              <!--<a class="icon-btn btn-outline-primary button-effect mr-3 ml-3" href="#">
+                <i data-feather="mic"></i></a>-->
+              <button type="submit" class="submit icon-btn btn-primary disabled" id="send-msg" disabled="disabled">
+                <i data-feather="send"></i>
+              </button>
+      
+          <!--<div class="emojis-contain">
+            <div class="emojis-sub-contain custom-scroll">
+              <ul>
+                <li>😀</li>
+                <li>😁</li>
+                <li>😂</li>
+                <li>😃</li>
+                <li>😄</li>
+                <li>😅</li>
+                <li>😆</li>
+                <li>😇</li>
+                <li>😈</li>
+                <li>😉</li>
+                <li>😊</li>
+                <li>😋</li>
+                <li>😌</li>
+                <li>😍</li>
+                <li>😎</li>
+                <li>😏</li>
+                <li>😐</li>
+                <li>😑</li>
+                <li>😒</li>
+                <li>😓</li>
+                <li>😔</li>
+                <li>😕</li>
+                <li>😖</li>
+                <li>😗</li>
+                <li>😘</li>
+                <li>😙</li>
+                <li>😚</li>
+                <li>😛</li>
+                <li>😜</li>
+                <li>😝</li>
+                <li>😞</li>
+                <li>😟</li>
+                <li>😠</li>
+                <li>😡</li>
+                <li>😢</li>
+                <li>😣</li>
+                <li>😥</li>
+                <li>😦</li>
+                <li>😧</li>
+                <li>😨</li>
+                <li>😩</li>
+                <li>😪</li>
+                <li>😫</li>
+                <li>😭</li>
+                <li>😮</li>
+                <li>😯</li>
+                <li>😰</li>
+                <li>😱</li>
+                <li>😲</li>
+                <li>😳</li>
+                <li>😴</li>
+                <li>😵</li>
+                <li>😶</li>
+                <li>😷</li>
+                <li>😸</li>
+                <li>😹</li>
+                <li>😺</li>
+                <li>😻</li>
+                <li>😼</li>
+                <li>😽</li>
+                <li>😾</li>
+                <li>🙀                    </li>
+                <li>🙃                    </li>
+              </ul>
+            </div>
+          </div>-->
+    
+    </form>
+ 

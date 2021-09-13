@@ -1,0 +1,50 @@
+<div class="Travelers">
+
+    <div class="mt-3">
+        <app-wizard-step-tailwind-css [stepCurrent]="stepCurrent"
+                         [stepsConfiguration]="stepsConfiguration"></app-wizard-step-tailwind-css>
+    </div>
+
+    
+
+    <h2>Choisissez 3 destinations en cliquant sur l'image</h2>
+
+    <div class="container mb-5 mt-5">
+        <div class="row justify-content-center">
+
+            <div class="col-lg-12 text-end mb-3 " >
+                <label for="toggle" class="text-xs text-gray-700">Voir sur la carte</label>
+                <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+                    <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                    <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                </div>
+           
+                 
+            </div>
+
+            <div class="ResultsControls">
+                  
+                  <div class="relative inline-flex SwitchButton">
+                    <select class="border border-orange-300 rounded-full text-orange-600 h-10 w-full pl-5 pr-10 bg-orange 
+                                    hover:border-orange-400 focus:outline-none appearance-none cursor-pointer">
+                        <option>Destinations où tout le monde bouge</option>
+                        <option>On se voit chez quelqu'un</option>
+                    </select>
+                    </div>
+              
+            </div>
+
+            
+          
+          <div class="col-lg-12 text-center mb-3 " >
+                <div class="Spinner">
+                    <span>10%</span>
+                    <div class="Loader">
+                    </div>
+                </div>
+              </div>
+            
+        </div>
+
+    </div>
+</div>

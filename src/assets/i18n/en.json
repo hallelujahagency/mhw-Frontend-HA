@@ -1,0 +1,74 @@
+{
+	"pageAccueil": {
+		"title": "MeetHalway - Accueil",
+		"h1TitleTyped": "Organize a trip ",
+		"typedData": {
+			"proposition1": "speed",
+			"proposition2": "among friends",
+			"proposition3": "simple"
+		  },
+		"citiesFeatureTitle": "Explore the most popular destinations at a reduced cost", 
+		"From": "From ",
+		"newsletterTitle": "Inscrivez-vous pour nous rejoindre",
+		"newsletterDescription": "Inspiration comes in many ways and you like to save everything from.",
+		"newsletterButtom": "Nous contacter",
+		"ourConceptTitle": "Découvrez notre concept",
+		"ourConceptDescription": "Souhaitez-vous en savoir d'avantage et voulez vous connaitre nos fonctionnalités et offres.",
+		"process1Title": "Organiser en un click et partager",
+		"process1Description": "Each time a digital asset is purchased or sold, Sequoir donates a percentage of the fees back into the development of the asset through its charitable foundation.",
+		"process2Title": "Retrouvez vous dans la ville choisie",
+		"process2Description": "Inspiration comes in many ways and you like to save everything from. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"processSteps": {
+			"step1Strong1": "Sauvegarde automatique",
+			"step1Description1": "effort into each unique project knowing that the more we put into it, the more we get out of it.",
+			"step1Strong2": "Simple d'utilisation",
+			"step1Description2": "A great client experience begins with a great team member experience.",
+			"step2Strong1": "Système de vote.",
+			"step2Description1": "effort into each unique project knowing that the more we put into it, the more we get out of it.",
+			"step2Strong2": "Messagerie instatannée",
+			"step2Description2": "A great client experience begins with a great team member experience."
+			
+		  },
+		  "callToActionTitle": "Voulez vous organiser un voyage entre potes, en famille sans vous tracasser?",
+		  "articlesBlogTitle": "Les articles récents",
+		  "articlesBlogDescription": "Voici quelques histoires"
+	  },
+	"login": "Login", 
+	"register": "Register",  
+
+	"letstart": "Let's go !",
+	"start": "Commencer",
+	"ourConcept": "Notre concept",
+	"videoNotSupported": "Désolé, votre navigateur ne prend pas en charge les vidéos.",
+	"contact": "Contact",
+	"help": "Aide",
+	"myProject": "Mon projet",
+	"pageInProgress": {
+	  "title": "Page en cours de création...",
+	  "description": "Nous faisons tout pour améliorer votre expérience au plus vite."
+	},
+	"TravelStartPageTitle": "Trouvez la meilleure destination pour vous retrouver sans effort !",
+	"TravelersPageTitle": "Quelles sont vos noms et stations de départ ?",
+	"TravelDatesPageTitle": "A quelles dates ?",
+	"TravelCalculPageTitle": "La magie opère, veuillez patienter...",
+	"TravelResultPageTitle": "Choisissez 3 destinations, en cliquant sur les vignettes",
+	"MyProjectPageTitle": "Veuillez coller le code du projet pour continuer",
+	"GoingToSomewhere": "Destination où tout le monde bouge",
+	"GoingAtHome": "On se voit chez quelqu'un ?",
+	"TravelSavePageTitle": "Donnez un nom à votre projet",
+	"TravelSummayPageTitle": "Votre projet a été enregistré !",
+	"ProjetName": "Nom projet :",
+	"ProjetCode": "Code projet :",
+	"ConsultProject": "Consulter mon projet",
+	"SendEmail": "Envoyer par email",
+	"ProjectPageTitle": "La sélection de votre futur voyage",
+	"TravelSharePageTitle": "A qui voulez-vous envoyer votre projet ?",
+	"proceed": "Continuer",
+	"save": "Sauvegarder",
+	"send": "Envoyer",
+	"We are": "Nous sommes",
+	"travelers": "voyageurs",
+	"NoData": "Aucune données, veuillez recommencer la saisie.",
+	"Update": "Mettre à jour"
+  }
+  
